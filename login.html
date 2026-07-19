@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Connect Hub - Login</title>
+<style>
+  body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: 
+    linear-gradient(135deg, rgba(43,58,103,0.85), rgba(74,91,158,0.85)),
+    url('images/college.jpg.jpeg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  }
+  .login-box {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 320px;
+  }
+  .login-box h1 {
+    color: #2b3a67;
+    margin-bottom: 5px;
+  }
+  .login-box p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  .login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b3a67;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .login-box button:hover {
+    background-color: #1f2a4d;
+  }
+  .error-msg {
+    color: #d32f2f;
+    font-size: 13px;
+    margin-top: 10px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Welcome, Freshers!💐</h1>
+    <p>Please verify to enter Connect Hub</p>
+    <input type="text" id="username" placeholder="Username (6-digit number)" maxlength="6">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="verifyLogin()">Verify</button>
+    <p class="error-msg" id="errorMsg">Invalid username or password</p>
+  </div>
+
+<script>
+function verifyLogin() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const errorMsg = document.getElementById('errorMsg');
+
+  const isSixDigits = /^\d{6}$/.test(username);
+  const isCorrectPassword = password === "freshy2026";
+
+  if (isSixDigits && isCorrectPassword) {
+    sessionStorage.setItem('connectHubVerified', 'true');
+    window.location.href = 'index.html';
+  } else {
+    errorMsg.style.display = 'block';
+  }
+}
+</script>
+
+</body>
+</html>
