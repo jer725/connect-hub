@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshers Portal - Faculty</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🎓 Freshers Portal</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="faculty.html" class="active">Faculty</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Faculty Directory</h1>
+    <p>Find faculty details across departments</p>
+  </section>
+
+  <section class="faculty-search-section">
+    <input type="text" id="facultySearch" placeholder="Search by name, department, or subject..." onkeyup="filterFaculty()">
+  </section>
+
+  <section class="faculty-list-section" id="facultyList">
+
+    <div id="faculty-container">Loading faculty...</div>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Freshers Portal — Saranathan College of Engineering</p>
+    <p>Need help? Contact us at freshersportal@college.edu</p>
+  </footer>
+
+  <button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

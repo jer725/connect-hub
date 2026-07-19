@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshers Portal - Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== TOP NAVIGATION BAR ===== -->
+  <header class="navbar">
+    <div class="logo">🎓Connect Hub</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><button class="map-btn" title="Campus Map">📍</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== WELCOME BANNER / HERO SECTION ===== -->
+  <section class="hero">
+    <h1>Welcome, Freshers!💐<br>Your Campus Decoded</h1>
+    <p>Everything you need to settle in — events, clubs, faculty & more, all in one place.</p>
+   
+  </section>
+
+  <!-- ===== QUICK ACCESS CARDS ===== -->
+   <section class="quick-access">
+    <h2 class="section-title">Explore</h2>
+    <div class="card-grid">
+
+      <a href="events.html" class="card">
+        <div class="card-icon">📅</div>
+        <h3>Events</h3>
+        <p>Browse and register for upcoming college events</p>
+      </a>
+
+      <a href="clubs.html" class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Clubs</h3>
+        <p>Discover clubs and communities to join</p>
+      </a>
+
+      <a href="faculty.html" class="card">
+        <div class="card-icon">👩‍🏫</div>
+        <h3>Faculty</h3>
+        <p>Find faculty details and contact info</p>
+      </a>
+
+      <a href="timetable.html" class="card">
+        <div class="card-icon">🗓️</div>
+        <h3>Timetable</h3>
+        <p>Check your class schedule</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="upcoming-events">
+  <h2>Coming Soon</h2>
+  <div class="event-preview-grid">
+
+    <div class="event-preview-card">
+      <span class="badge-event">EVENT</span>
+      <h3>AI Workshop</h3>
+      <p>📅 July 22, 2026</p>
+      <p>📍 Seminar Hall</p>
+    </div>
+
+    <div class="event-preview-card">
+      <span class="badge-club">CLUB</span>
+      <h3>Coding Club</h3>
+      <p>🗓️ Every Friday, 4:00 PM</p>
+      <p>💻 Technical</p>
+    </div>
+
+    <div class="event-preview-card">
+      <span class="badge-event">EVENT</span>
+      <h3>Coding Club Meetup</h3>
+      <p>📅 July 24, 2026</p>
+      <p>📍 CSE Block, Room 204</p>
+    </div>
+
+  </div>
+  <a href="explore.html" class="view-all-btn">Explore Events & Clubs →</a>
+</section>
+  
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 Freshers Portal — Saranathan College of Engineering</p>
+    <p>Need help? Contact us at freshersportal@college.edu</p>
+  </footer>
+
+  <!-- ===== FLOATING CHATBOT BUTTON ===== -->
+  <button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+
+  <div id="chatbotBox" class="chatbot-box" style="display:none;">
+    <div class="chatbot-header">
+      <span>🎓 Ask Me Anything</span>
+      <button id="closeChatBtn">✖</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"></div>
+    <div class="chatbot-input-row">
+      <input type="text" id="chatbotInput" placeholder="Ask about events, clubs, faculty..." />
+      <button id="sendChatBtn">Send</button>
+    </div>
+  </div>
+  <div id="campusMapModal" class="modal-overlay" style="display:none;">
+  <div class="modal-box map-box">
+    <h3>Campus Map</h3>
+    <div class="campus-map">
+      <div class="map-road">GROUND</div>
+<div class="map-block">Mech Block</div>
+<div class="map-block">Bus Stand</div>
+<div class="map-block">Canteen</div>
+<div class="map-block">JS Block</div>
+<div class="map-block">KS Block</div>
+<div class="map-block">RV Block</div>
+<div class="map-ground">Ground</div>
+<div class="map-parking">Bike / Car Parking</div>
+<div class="map-gate">Main Gate</div>
+    <button type="button" id="closeMapBtn">Close</button>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/script.js"></script>
+</body>

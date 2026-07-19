@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable - Freshers Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAV BAR: copy your exact nav from faculty.html here so it matches -->
+    <nav class="navbar">
+        <div class="logo">Freshers Portal</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="timetable.html" class="active">Timetable</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1>Class Timetable</h1>
+        <p>Weekly schedule at a glance</p>
+    </div>
+
+    <!-- TIMETABLE -->
+   <div class="dept-tabs">
+    <button class="dept-tab-btn active" onclick="showDept('cse')">CSE</button>
+    <button class="dept-tab-btn" onclick="showDept('ece')">ECE</button>
+    <button class="dept-tab-btn" onclick="showDept('mech')">Mechanical</button>
+</div>
+<p class="timetable-note">Showing 3 departments as a demo — the same structure supports any number of departments.</p>
+
+<div class="timetable-wrapper">
+    <table class="timetable dept-table" id="cse-table">
+        <thead>
+            <tr><th>Period</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+        </thead>
+        <tbody>
+            <tbody>
+    <tr><td>1st Period</td><td>Maths</td><td>Physics</td><td>English</td><td>Maths</td><td>Lab</td></tr>
+    <tr><td>2nd Period</td><td>Physics</td><td>Maths</td><td>Lab</td><td>English</td><td>Physics</td></tr>
+    <tr><td>3rd Period</td><td>English</td><td>DS</td><td>Maths</td><td>Physics</td><td>DS</td></tr>
+    <tr><td>4th Period</td><td>DS</td><td>English</td><td>Physics</td><td>Lab</td><td>Maths</td></tr>
+    <tr><td>5th Period</td><td>OOPS</td><td>Lab</td><td>DS</td><td>OOPS</td><td>English</td></tr>
+    <tr><td>6th Period</td><td>Lab</td><td>OOPS</td><td>English</td><td>DS</td><td>OOPS</td></tr>
+    <tr><td>7th Period</td><td>Library</td><td>Sports</td><td>Lab</td><td>Library</td><td>Sports</td></tr>
+    <tr><td>8th Period</td><td>Sports</td><td>Library</td><td>Sports</td><td>Lab</td><td>Library</td></tr>
+</tbody>
+        </tbody>
+    </table>
+
+    <table class="timetable dept-table" id="ece-table" style="display:none;">
+        <thead>
+            <tr><th>Period</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+        </thead>
+        <tbody>
+            <tbody>
+    <tr><td>1st Period</td><td>Circuits</td><td>Maths</td><td>English</td><td>Circuits</td><td>Lab</td></tr>
+    <tr><td>2nd Period</td><td>Maths</td><td>Circuits</td><td>Lab</td><td>English</td><td>Signals</td></tr>
+    <tr><td>3rd Period</td><td>English</td><td>Signals</td><td>Maths</td><td>Circuits</td><td>Signals</td></tr>
+    <tr><td>4th Period</td><td>Signals</td><td>English</td><td>Circuits</td><td>Lab</td><td>Maths</td></tr>
+    <tr><td>5th Period</td><td>EDC</td><td>Lab</td><td>Signals</td><td>EDC</td><td>English</td></tr>
+    <tr><td>6th Period</td><td>Lab</td><td>EDC</td><td>English</td><td>Signals</td><td>EDC</td></tr>
+    <tr><td>7th Period</td><td>Library</td><td>Sports</td><td>Lab</td><td>Library</td><td>Sports</td></tr>
+    <tr><td>8th Period</td><td>Sports</td><td>Library</td><td>Sports</td><td>Lab</td><td>Library</td></tr>
+</tbody>
+        </tbody>
+    </table>
+
+    <table class="timetable dept-table" id="mech-table" style="display:none;">
+        <thead>
+            <tr><th>Period</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+        </thead>
+        <tbody>
+            <tbody>
+    <tr><td>1st Period</td><td>Mechanics</td><td>Maths</td><td>English</td><td>Mechanics</td><td>Workshop</td></tr>
+    <tr><td>2nd Period</td><td>Maths</td><td>Mechanics</td><td>Workshop</td><td>English</td><td>Thermo</td></tr>
+    <tr><td>3rd Period</td><td>English</td><td>Thermo</td><td>Maths</td><td>Mechanics</td><td>Thermo</td></tr>
+    <tr><td>4th Period</td><td>Thermo</td><td>English</td><td>Mechanics</td><td>Workshop</td><td>Maths</td></tr>
+    <tr><td>5th Period</td><td>Fluids</td><td>Workshop</td><td>Thermo</td><td>Fluids</td><td>English</td></tr>
+    <tr><td>6th Period</td><td>Workshop</td><td>Fluids</td><td>English</td><td>Thermo</td><td>Fluids</td></tr>
+    <tr><td>7th Period</td><td>Library</td><td>Sports</td><td>Workshop</td><td>Library</td><td>Sports</td></tr>
+    <tr><td>8th Period</td><td>Sports</td><td>Library</td><td>Sports</td><td>Workshop</td><td>Library</td></tr>
+</tbody>
+        </tbody>
+    </table>
+</div>
+    <!-- FOOTER: copy your exact footer from faculty.html here so it matches -->
+    <footer>
+        <p>&copy; 2026 Freshers Portal</p>
+    </footer>
+
+    <button id="chatbotBtn" class="chatbot-btn">💬</button>
+
+    <script src="js/script.js"></script>
+    <script>
+function showDept(dept) {
+    document.querySelectorAll('.dept-table').forEach(t => t.style.display = 'none');
+    document.getElementById(dept + '-table').style.display = 'table';
+
+    document.querySelectorAll('.dept-tab-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

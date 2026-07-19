@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshers Portal - Clubs</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🎓 Freshers Portal</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="clubs.html" class="active">Clubs</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Clubs & Communities</h1>
+    <p>Find your people — join a club that matches your interests</p>
+  </section>
+
+ <section class="clubs-grid-section">
+  <div id="clubs-container">Loading clubs...</div>
+</section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Freshers Portal — Saranathan College of Engineering</p>
+    <p>Need help? Contact us at freshersportal@college.edu</p>
+  </footer>
+
+  <button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/script.js"></script>
+  <div id="registrationModal" class="modal-overlay" style="display:none;">
+  <div class="modal-box">
+    <h3 id="modalTitle">Register</h3>
+    <form id="registrationForm">
+      <label>Name</label>
+      <input type="text" id="regName" required>
+
+      <label>Email</label>
+      <input type="email" id="regEmail" required>
+
+      <label>Roll Number</label>
+      <input type="text" id="regRoll" required>
+
+      <button type="submit">Submit</button>
+      <button type="button" id="closeModalBtn">Cancel</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
