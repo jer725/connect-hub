@@ -9,6 +9,12 @@
 <body>
 
   <!-- ===== TOP NAVIGATION BAR ===== -->
+  <div id="posterOverlay" class="poster-overlay">
+    <div class="poster-box">
+        <button id="closePosterBtn" class="poster-close-btn">&times;</button>
+        <img src="images/poster.jpg.jpeg" alt="Welcome Poster" class="poster-img">
+    </div>
+</div>
   <header class="navbar">
     <div class="logo">🎓Connect Hub</div>
     <nav>
@@ -133,4 +139,11 @@
   <script src="js/config.js"></script>
   <script src="js/chatbot.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('closePosterBtn').addEventListener('click', function() {
+            document.getElementById('posterOverlay').style.display = 'none';
+        });
+    });
+</script>
 </body>
