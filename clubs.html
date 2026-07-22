@@ -36,8 +36,7 @@
     <p>Need help? Contact us at freshersportal@college.edu</p>
   </footer>
 
-  <button class="chatbot-btn" title="Ask AI Assistant">💬</button>
-  <script src="js/supabase-client.js"></script>
+  
   <script src="js/script.js"></script>
   <div id="registrationModal" class="modal-overlay" style="display:none;">
   <div class="modal-box">
@@ -55,6 +54,24 @@
       <button type="submit">Submit</button>
       <button type="button" id="closeModalBtn">Cancel</button>
     </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/chatbot.js"></script>
+
+<!-- ===== FLOATING CHATBOT BUTTON ===== -->
+<button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+<div id="chatbotBox" class="chatbot-box" style="display:none;">
+  <div class="chatbot-header">
+    <span>Ask Me Anything</span>
+    <button id="closeChatBtn">×</button>
+  </div>
+  <div id="chatbotMessages" class="chatbot-messages"></div>
+  <div class="chatbot-input-row">
+    <input type="text" id="chatbotInput" placeholder="Ask about events, clubs, faculty...">
+    <button id="sendChatBtn">Send</button>
   </div>
 </div>
 </body>
