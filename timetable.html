@@ -94,7 +94,6 @@
         <p>&copy; 2026 Freshers Portal</p>
     </footer>
 
-    <button id="chatbotBtn" class="chatbot-btn">💬</button>
 
     <script src="js/script.js"></script>
     <script>
@@ -106,5 +105,23 @@ function showDept(dept) {
     event.target.classList.add('active');
 }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/chatbot.js"></script>
+
+<!-- ===== FLOATING CHATBOT BUTTON ===== -->
+<button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+<div id="chatbotBox" class="chatbot-box" style="display:none;">
+  <div class="chatbot-header">
+    <span>Ask Me Anything</span>
+    <button id="closeChatBtn">×</button>
+  </div>
+  <div id="chatbotMessages" class="chatbot-messages"></div>
+  <div class="chatbot-input-row">
+    <input type="text" id="chatbotInput" placeholder="Ask about events, clubs, faculty...">
+    <button id="sendChatBtn">Send</button>
+  </div>
+</div>
 </body>
 </html>
