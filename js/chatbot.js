@@ -51,28 +51,20 @@ ${userMessage}`;
 
 // Sends the combined prompt to Groq's API and returns the AI's reply text
 async function getAIResponse(prompt) {
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  const response = await fetch("/api/chat", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${GROQ_API_KEY}`
-    },
-    body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
-      messages: [
-        { role: "user", content: prompt }
-      ]
-    })
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt })
   });
 
   const data = await response.json();
 
   if (data.error) {
-    console.error("Groq API error:", data.error);
+    console.error("api/chat error:", data.error);
     return "Sorry, I'm having trouble responding right now.";
   }
 
-  return data.choices[0].message.content;
+  return data.reply;
 }
 
 // ===== CHATBOT UI WIRING =====
